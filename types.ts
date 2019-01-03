@@ -16,17 +16,35 @@ newAge = 31;
 newAge = '31';
 
 //so we need to assign type to variable
-let strAge : string;
+let strAge: string;
 
 strAge = '31';
 
 //array types
-let hobbies = ["cooking", "games", "movies"];
+let hobbies = ['cooking', 'games', 'movies'];
 //now tsc will auto assign type string to this array
 //we can add type: any[] to make it any type array, but it should be array
 // hobbies = [100]; //and if we try to assign numbers to it it will produce error
 
 //tuples
 //they are just arrays with mixed types and predefined umber of items
-let address: [string, number] = ["high street", 123];
+let address: [string, number] = ['high street', 123];
 // address = [123, 'home']
+
+//enums
+enum RGB {
+  red,
+  green,
+  blue
+}
+//you can give values to enums by: red = 100;
+//and then next item will have value of 101
+
+let newColor: RGB = RGB.red;
+
+//any
+let car: any = 'Ford';
+car = {
+  brand: 'Ford',
+  year: 2006
+};

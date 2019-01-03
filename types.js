@@ -15,11 +15,19 @@ newAge = '31';
 var strAge;
 strAge = '31';
 //array types
-var hobbies = ["cooking", "games", "movies"];
+var hobbies = ['cooking', 'games', 'movies'];
 //now tsc will auto assign type string to this array
 //we can add type: any[] to make it any type array, but it should be array
 // hobbies = [100]; //and if we try to assign numbers to it it will produce error
 //tuples
 //they are just arrays with mixed types and predefined umber of items
-var address = ["high street", 123];
+var address = ['high street', 123];
 // address = [123, 'home']
+//enums
+var RGB;
+(function (RGB) {
+    RGB[RGB["red"] = 0] = "red";
+    RGB[RGB["green"] = 1] = "green";
+    RGB[RGB["blue"] = 2] = "blue";
+})(RGB || (RGB = {}));
+var newColor = RGB.red;
