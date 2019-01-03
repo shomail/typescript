@@ -30,4 +30,12 @@ var RGB;
     RGB[RGB["green"] = 1] = "green";
     RGB[RGB["blue"] = 2] = "blue";
 })(RGB || (RGB = {}));
+//you can give values to enums by: red = 100;
+//and then next item will have value of 101
 var newColor = RGB.red;
+//any
+var car = 'Ford';
+car = {
+    brand: 'Ford',
+    year: 2006
+};
