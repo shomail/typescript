@@ -48,3 +48,37 @@ car = {
   brand: 'Ford',
   year: 2006
 };
+
+//union types
+//instead of any type which fails the concept of types we can use union types to say one or more types possible nad we are not sure about them. we can use more then two types in union as well
+
+let dollarRate: number | string = 150;
+
+dollarRate = '141';
+
+// dollarRate = false; error
+
+//checking for types at runtime
+let userId = 23;
+
+if(typeof userId === 'number'){
+  //at runtime with typeof the type must be in quotes as string
+  //do something
+}
+
+//never type
+//because this functions never finishes we can assign it never type
+function neverReturn(): never {
+  throw new Error('error');
+}
+
+//nullable type
+let canBeNull: number | null = 12;
+canBeNull = null;
+
+let canAlsoBeNull;
+canAlsoBeNull = null;
+
+//here it is allowed because variable type is any but if strictNullChecks is on it will throw error.
+let canThisBeAny = null;
+canThisBeAny = 400;
