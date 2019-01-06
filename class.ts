@@ -81,3 +81,39 @@ console.log(dog.breed);
 dog.breed = 'pommy pipi';
 
 console.log(dog.breed);
+
+//static properties & methods
+
+class Helpers {
+  static PI: number = 3.14;
+  static calcCircum(diameter: number): number {
+    return this.PI * diameter;
+  }
+}
+
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircum(10));
+
+//Abstract Class
+//these classes cannot be instantiated directly
+//you can only inherit from them
+abstract class Project {
+  projectName: string = 'Default';
+  budget: number = 0;
+  abstract changeName(name: string): void;
+  calcBudget() {
+    return this.budget * 2;
+  }
+}
+
+class ITProject extends Project {
+  changeName(name: string): void {
+    this.projectName = name;
+  }
+}
+
+let newProject = new ITProject();
+
+console.log(newProject);
+newProject.changeName('Super IT Project');
+console.log(newProject);

@@ -87,3 +87,42 @@ var dog = new Dog();
 console.log(dog.breed);
 dog.breed = 'pommy pipi';
 console.log(dog.breed);
+//static properties & methods
+var Helpers = /** @class */ (function () {
+    function Helpers() {
+    }
+    Helpers.calcCircum = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircum(10));
+//Abstract Class
+//these classes cannot be instantiated directly
+//you can only inherit from them
+var Project = /** @class */ (function () {
+    function Project() {
+        this.projectName = 'Default';
+        this.budget = 0;
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget * 2;
+    };
+    return Project;
+}());
+var ITProject = /** @class */ (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+var newProject = new ITProject();
+console.log(newProject);
+newProject.changeName('Super IT Project');
+console.log(newProject);
