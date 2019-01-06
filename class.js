@@ -126,3 +126,22 @@ var newProject = new ITProject();
 console.log(newProject);
 newProject.changeName('Super IT Project');
 console.log(newProject);
+//private constructor
+var OnlyOne = /** @class */ (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The Only One');
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+//this is singleton pattern
+//it means this class should have only one instance throughout the app
+// let wrong = new OnlyOne('The Only One');
+var right = OnlyOne.getInstance();
+//if we do not set setter of a property it becomes a readonly
+//otherwise we can add keyword readonly infront of the property
