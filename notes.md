@@ -14,3 +14,5 @@ In large scale app namespaces are not manageable and has limitations like we don
 Nampespaces organize application with JS objects, can be split up to multiple files and we do not need a module loader to use them. But dependencies get difficult to manage in bigger applications.
 
 Modules helps us organize application with real es6 modules, split them up to multiple files but we need a module loader to load them in the browser, if we use commonjs comiple option then we don't need it in node js app. We have explicit dependency declaration and we know which module has what dependency.
+
+If we make a function accept and return any type then it's not clear what our function is doing and what methods are available to returned response. That's why we could use generics
