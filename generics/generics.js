@@ -21,3 +21,11 @@ function genericEcho(data) {
 console.log(genericEcho('sbt'));
 console.log(genericEcho(27));
 console.log(genericEcho({ name: 'SBT' }));
+//these are all the examples of generics in functions
+//but ts also has generic types
+//Generic Types
+//this is cryptic so lets break it down
+//we are assigning a type to const everything after : and before = is type
+//
+var echo2 = genericEcho;
+console.log(echo2('something new'));
