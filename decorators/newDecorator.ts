@@ -4,11 +4,11 @@ function printable(constructorFn: Function) {
   };
 }
 
-function logged(constructorFn: Function) {
-  console.log('Plant say hi!');
+function loggedIn(constructorFn: Function) {
+  console.log('Plant logged in system!');
 }
 
-@logged
+@loggedIn
 @printable
 class Plant {
   name = 'Green plant';

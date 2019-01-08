@@ -10,15 +10,15 @@ function printable(constructorFn) {
         console.log(this);
     };
 }
-function logged(constructorFn) {
-    console.log('Plant say hi!');
+function loggedIn(constructorFn) {
+    console.log('Plant logged in system!');
 }
 var Plant = /** @class */ (function () {
     function Plant() {
         this.name = 'Green plant';
     }
     Plant = __decorate([
-        logged,
+        loggedIn,
         printable
     ], Plant);
     return Plant;
