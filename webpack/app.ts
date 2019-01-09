@@ -1,0 +1,1 @@
+const webpackMessage: string = "webpack is cool!"
